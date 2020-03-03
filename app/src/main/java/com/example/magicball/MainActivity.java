@@ -101,26 +101,5 @@ public class MainActivity extends AppCompatActivity {
 
     //public void customSet(View view)
     //{}
-       /*if(count>=10)
-       {
-           custom.fill(custom.getGoodArrayList(),10,getText);
-           count++;
-       }
-        else if(count<=15)
-        {
-            custom.fill(custom.getGoodArrayList(),5,getText);
-            count++;
-        }
-        else  if(count<=20)
-        {
-            custom.fill(custom.getGoodArrayList(),5,getText);
-            count++;
-        }
-        else
-       {
-           //disable button
-       }
-    }
-
-
-}
+       //if(count>=10)
+      //
