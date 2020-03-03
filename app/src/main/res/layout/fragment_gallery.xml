@@ -49,7 +49,6 @@
         android:id="@+id/magicAnswer"
         android:layout_width="242dp"
         android:layout_height="139dp"
-        android:text="Your answer will show up shortly"
         app:layout_constraintBottom_toTopOf="@+id/etEnterQuestion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
