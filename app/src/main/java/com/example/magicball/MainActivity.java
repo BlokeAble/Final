@@ -29,6 +29,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+    //HALEY WAS HERE
 
     Dice dice=new Dice();
     MagicObj magicEightBall=new Base();
