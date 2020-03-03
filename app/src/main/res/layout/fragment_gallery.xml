@@ -39,6 +39,7 @@
         android:ems="10"
         android:hint="@string/enter_your_question"
         android:inputType="textPersonName"
+        android:textColor="#673AB7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.642"
