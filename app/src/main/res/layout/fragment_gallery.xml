@@ -48,16 +48,16 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="347dp"
-        android:layout_height="205dp"
+        android:layout_width="393dp"
+        android:layout_height="390dp"
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.684"
-        app:srcCompat="@drawable/magic8ballthing" />
+        app:layout_constraintVertical_bias="0.953"
+        app:srcCompat="@drawable/magic8ballthingrevised" />
 
     <TextView
         android:id="@+id/magicAnswer"
@@ -66,9 +66,9 @@
         android:text="@string/textview"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.658"
+        app:layout_constraintHorizontal_bias="0.67"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.596" />
+        app:layout_constraintVertical_bias="0.637" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
