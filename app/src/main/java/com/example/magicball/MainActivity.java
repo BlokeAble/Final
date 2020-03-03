@@ -38,7 +38,8 @@ public class MainActivity extends AppCompatActivity {
     int count=0;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
-        magicAnswer =findViewById(R.id.magicAnswer); //
+        magicAnswer =findViewById(R.id.magicAnswer);
     }
 
 
@@ -84,19 +85,23 @@ public class MainActivity extends AppCompatActivity {
 
     public void magicSubmit(View view)
     {
-        magicAnswer.setText(magicEightBall.createRandom(dice.roll20()));//broke
+        magicAnswer = findViewById(R.id.magicAnswer);
+        magicAnswer.setText(magicEightBall.createRandom(dice.roll20()));
     }
 
-    public void customSubmit(View view)
-    {
-        magicAnswer.setText(custom.createRandom(dice.roll20()));//broke
-    }
+}
+
+   // public void customSubmit(View view)
+   // {
+        //customAnswer= findViewById(R.id.customAnswer);
+        //customAnswer.setText(custom.createRandom(dice.roll20()));//broke
+    //}
 
     //custom
-    /*
-    public void customSet(View view)
-    {
-       if(count>=10)
+
+    //public void customSet(View view)
+    //{}
+       /*if(count>=10)
        {
            custom.fill(custom.getGoodArrayList(),10,getText);
            count++;
@@ -116,6 +121,6 @@ public class MainActivity extends AppCompatActivity {
            //disable button
        }
     }
-     */
+
 
 }
