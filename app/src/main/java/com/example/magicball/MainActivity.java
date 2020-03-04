@@ -1,5 +1,6 @@
 package com.example.magicball;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import com.example.magicball.model.Base;
@@ -24,6 +25,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.Button;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,15 +34,17 @@ public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     //HALEY WAS HERE
 
-    Dice dice=new Dice();
-    MagicObj magicEightBall=new Base();
-    MagicObj custom=new Custom();
+    Dice dice = new Dice();
+    MagicObj magicEightBall = new Base();
+    Custom custom = new Custom();
     TextView magicAnswer;
-    int count=0;
+    TextView reply, input;
+    ScrollView list;
+    Button cusButton;
+    int count = 1;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -65,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
-        magicAnswer =findViewById(R.id.magicAnswer);
+        magicAnswer = findViewById(R.id.magicAnswer);
     }
 
 
@@ -83,22 +88,58 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
-    public void magicSubmit(View view)
-    {
+    public void magicSubmit(View view) {
         magicAnswer = findViewById(R.id.magicAnswer);
         magicAnswer.setText(magicEightBall.createRandom(dice.roll20()));
     }
-}
 
-   // public void customSubmit(View view)
-   // {
+/*
+   public void customSubmit(View view)
+   {
         //customAnswer= findViewById(R.id.customAnswer);
         //customAnswer.setText(custom.createRandom(dice.roll20()));//broke
-    //}
-
+   }
+*/
     //custom
 
-    //public void customSet(View view)
-    //{}
-       //if(count>=10)
-      //
+    @SuppressLint("SetTextI18n")
+    public void customSet(View view)
+    {
+
+        input= findViewById(R.id.customInput);
+        reply= findViewById(R.id.customReplies);
+        list= findViewById(R.id.customScrollView);
+        cusButton= findViewById(R.id.customEnter);
+        cusButton.setEnabled(true);
+        String str=input.toString();
+
+        if(count<=10)
+        {
+            custom.fillGood(str);
+            reply.setText(count +", Good");
+            input.setText("");
+            count++;
+        }
+        else if(count<=15)
+        {
+            custom.fillNeutral(str);
+            reply.setText(count +", Neutral");
+            input.setText("");
+            count++;
+        }
+        else if(count<=20)
+        {
+            custom.fillBad(str);
+            reply.setText(count +", Bad");
+            input.setText("");
+            count++;
+        }
+        else{
+                input.setText("Your Done");
+              //show inputs inputs in list
+              cusButton.setEnabled(false);
+              count=1;
+        }
+    }
+
+}

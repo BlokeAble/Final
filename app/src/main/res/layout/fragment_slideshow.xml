@@ -20,18 +20,18 @@
 
     <EditText
         android:id="@+id/customInput"
-        android:layout_width="251dp"
-        android:layout_height="41dp"
+        android:layout_width="255dp"
+        android:layout_height="48dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.231"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.188"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.178" />
 
     <TextView
         android:id="@+id/customReplies"
@@ -54,5 +54,19 @@
         app:layout_constraintVertical_bias="0.406">
 
     </ScrollView>
+
+    <Button
+        android:id="@+id/customEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:layout_marginBottom="245dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="@+id/customScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toEndOf="@+id/customInput"
+        app:layout_constraintTop_toBottomOf="@+id/text_slideshow"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

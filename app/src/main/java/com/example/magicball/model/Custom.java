@@ -4,17 +4,20 @@ import java.util.ArrayList;
 
 public class Custom extends MagicObj
 {
-    public Custom()
-    {
 
+   public void fillGood( String input)
+    {
+            good.add(input);
     }
 
-   public void fill(ArrayList pick, int size, String input)
+    public void fillNeutral( String input)
     {
-        for(int i=0; i<size-1;i++)
-        {
-            pick.add(input);
-        }
-
+        neutral.add(input);
     }
+
+    public void fillBad( String input)
+    {
+        bad.add(input);
+    }
+
  }
