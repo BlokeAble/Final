@@ -88,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
         magicAnswer = findViewById(R.id.magicAnswer);
         magicAnswer.setText(magicEightBall.createRandom(dice.roll20()));
     }
-
 }
 
    // public void customSubmit(View view)
