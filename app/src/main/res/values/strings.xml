@@ -8,9 +8,9 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_tools">Tools</string>
+    <string name="menu_gallery">Magic 8 Ball</string>
+    <string name="menu_slideshow">Create Custom</string>
+    <string name="menu_tools">Go to Custom</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
     <string name="click_to_get_your_fortune">Click to get your Fortune</string>
