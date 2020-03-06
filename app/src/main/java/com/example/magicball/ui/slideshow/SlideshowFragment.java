@@ -1,9 +1,11 @@
 package com.example.magicball.ui.slideshow;
 
+import android.graphics.Picture;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -16,12 +18,13 @@ import com.example.magicball.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import java.util.Random;
+
 public class SlideshowFragment extends Fragment {
 
     private SlideshowViewModel slideshowViewModel;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         slideshowViewModel =
                 ViewModelProviders.of(this).get(SlideshowViewModel.class);
@@ -35,4 +38,6 @@ public class SlideshowFragment extends Fragment {
         });
         return root;
     }
+
+
 }

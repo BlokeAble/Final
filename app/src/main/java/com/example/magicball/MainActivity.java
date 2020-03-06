@@ -1,12 +1,15 @@
 package com.example.magicball;
 
 import android.annotation.SuppressLint;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
+import com.example.magicball.controller.Global;
 import com.example.magicball.model.Base;
 import com.example.magicball.model.Custom;
 import com.example.magicball.model.Dice;
 import com.example.magicball.model.MagicObj;
+import com.example.magicball.ui.slideshow.Pictures;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -26,13 +29,16 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    //HALEY WAS HERE
+    private int index = 0;
+    ImageView ivChoices;
+    Pictures pictures = new Pictures();
 
     Dice dice = new Dice();
     MagicObj magicEightBall = new Base();
@@ -46,17 +52,24 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Global.goodReplies.clear();
+        Global.neutralReplies.clear();
+        Global.badReplies.clear();
+        pictures.add(R.drawable.cat);
+        pictures.add(R.drawable.packettracer);
+        pictures.add(R.drawable.panda);
+        pictures.add(R.drawable.magic8ballthingrevised);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//        FloatingActionButton fab = findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -142,4 +155,28 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void clickToGoBack(View view) {
+        ivChoices = findViewById(R.id.ivChoices);
+        if(index > 0){
+            --index;
+        }
+        ivChoices.setImageResource(pictures.get(index));
+        Global.image = pictures.get(index);
+    }
+
+    public void clickToGoNext(View view) {
+        ivChoices = findViewById(R.id.ivChoices);
+        if(index < pictures.size() - 1){
+            ++index;
+        }
+
+        ivChoices.setImageResource(pictures.get(index));
+        Global.image = pictures.get(index);
+    }
+
+    public void getFortuneForCustom(View view) {
+
+
+
+    }
 }
