@@ -28,10 +28,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,10 +47,17 @@ public class MainActivity extends AppCompatActivity {
     MagicObj magicEightBall = new Base();
     Custom custom = new Custom();
     TextView magicAnswer;
+
+    //set custom
     TextView reply, input;
-    ScrollView list;
     Button cusButton;
     int count = 1;
+
+    //Scroll List
+    TextView list;
+
+    //custom
+    TextView cusAnswer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,50 +116,49 @@ public class MainActivity extends AppCompatActivity {
         magicAnswer.setText(magicEightBall.createRandom(dice.roll20()));
     }
 
-/*
-   public void customSubmit(View view)
-   {
-        //customAnswer= findViewById(R.id.customAnswer);
-        //customAnswer.setText(custom.createRandom(dice.roll20()));//broke
-   }
-*/
     //custom
 
     @SuppressLint("SetTextI18n")
     public void customSet(View view)
     {
-
         input= findViewById(R.id.customInput);
         reply= findViewById(R.id.customReplies);
-        list= findViewById(R.id.customScrollView);
+        list= findViewById(R.id.customList);
         cusButton= findViewById(R.id.customEnter);
         cusButton.setEnabled(true);
         String str=input.toString();
 
-        if(count<=10)
+        //Ongoing String
+        StringBuilder build=new StringBuilder();
+
+        if(count<10)
         {
             custom.fillGood(str);
-            reply.setText(count +", Good");
+            reply.setText(10-count +", Good");
             input.setText("");
+            build.append(str);
             count++;
         }
-        else if(count<=15)
+        else if(count<15)
         {
             custom.fillNeutral(str);
-            reply.setText(count +", Neutral");
+            reply.setText(15-count+", Neutral");
             input.setText("");
+            build.append(str);
             count++;
         }
-        else if(count<=20)
+        else if(count<20)
         {
             custom.fillBad(str);
-            reply.setText(count +", Bad");
+            reply.setText(20-count +", Bad");
             input.setText("");
+            build.append(str);
             count++;
         }
         else{
-                input.setText("Your Done");
+              reply.setText("Your Done");
               //show inputs inputs in list
+              list.setText(build.toString());
               cusButton.setEnabled(false);
               count=1;
         }
@@ -176,7 +185,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void getFortuneForCustom(View view) {
 
-
+        cusAnswer= findViewById(R.id.customAnswer);
+        cusAnswer.setText(custom.createRandom(dice.roll20()));
 
     }
 }

@@ -55,6 +55,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.37">
 
+        <TextView
+            android:id="@+id/customList"
+            android:layout_width="296dp"
+            android:layout_height="139dp"
+            android:text="Your input" />
+
     </ScrollView>
 
     <Button
