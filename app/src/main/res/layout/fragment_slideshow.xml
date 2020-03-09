@@ -37,6 +37,8 @@
         android:id="@+id/customReplies"
         android:layout_width="296dp"
         android:layout_height="48dp"
+        android:text="Enter 10. Good outcomes"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.321"
@@ -58,8 +60,7 @@
         <TextView
             android:id="@+id/customList"
             android:layout_width="296dp"
-            android:layout_height="139dp"
-            android:text="Your input" />
+            android:layout_height="139dp" />
 
     </ScrollView>
 

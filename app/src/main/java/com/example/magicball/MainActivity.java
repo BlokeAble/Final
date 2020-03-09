@@ -51,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
     //set custom
     TextView reply, input;
     Button cusButton;
-    int count = 1;
+    int count=1;
+    public static String output="";
 
     //Scroll List
     TextView list;
@@ -117,7 +118,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //custom
-
     @SuppressLint("SetTextI18n")
     public void customSet(View view)
     {
@@ -125,18 +125,21 @@ public class MainActivity extends AppCompatActivity {
         reply= findViewById(R.id.customReplies);
         list= findViewById(R.id.customList);
         cusButton= findViewById(R.id.customEnter);
+
         cusButton.setEnabled(true);
-        String str=input.toString();
+        input.setEnabled(true);
+        String str;
+        str=input.getText().toString();
+
 
         //Ongoing String
-        StringBuilder build=new StringBuilder();
 
-        if(count<10)
+        if(count<11)
         {
             custom.fillGood(str);
             reply.setText(10-count +", Good");
             input.setText("");
-            build.append(str);
+            output= output+"Good: "+str+"\n";
             count++;
         }
         else if(count<15)
@@ -144,21 +147,23 @@ public class MainActivity extends AppCompatActivity {
             custom.fillNeutral(str);
             reply.setText(15-count+", Neutral");
             input.setText("");
-            build.append(str);
+            output= output+"Neutral: "+str+"\n";
             count++;
         }
         else if(count<20)
         {
             custom.fillBad(str);
-            reply.setText(20-count +", Bad");
+            reply.setText(20-count+", Bad");
             input.setText("");
-            build.append(str);
+            output+="Bad: "+str+"\n";
             count++;
         }
         else{
               reply.setText("Your Done");
               //show inputs inputs in list
-              list.setText(build.toString());
+              list.setText(output);
+              input.setText("");
+              input.setEnabled(false);
               cusButton.setEnabled(false);
               count=1;
         }

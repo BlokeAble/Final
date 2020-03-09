@@ -1,7 +1,5 @@
 package com.example.magicball.model;
 
-import java.util.ArrayList;
-
 public class Custom extends MagicObj
 {
 
