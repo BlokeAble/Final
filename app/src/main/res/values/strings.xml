@@ -28,5 +28,7 @@
     <string name="enter_your_questions">Enter Your Question</string>
     <string name="enter_your_questionss">Enter Your Question</string>
     <string name="enter_a_question">Enter A Question</string>
+    <string name="enter_10_good_outcomes">Enter 10. Good outcomes</string>
+    <string name="backd">Back</string>
 
 </resources>

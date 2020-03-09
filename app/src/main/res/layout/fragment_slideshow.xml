@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#000000">
 
     <TextView
         android:id="@+id/text_slideshow"
@@ -24,32 +25,44 @@
         android:layout_height="48dp"
         android:autofillHints=""
         android:ems="10"
+        android:fontFamily="@font/aclonica"
         android:hint="@string/enter_custom_answer"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.231"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.178" />
-
-    <TextView
-        android:id="@+id/customReplies"
-        android:layout_width="296dp"
-        android:layout_height="48dp"
-        android:text="Enter 10. Good outcomes"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.321"
+        app:layout_constraintHorizontal_bias="0.282"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.196" />
+
+    <TextView
+        android:id="@+id/customReplies"
+        android:layout_width="341dp"
+        android:layout_height="38dp"
+        android:fontFamily="@font/berkshire_swash"
+        android:shadowColor="#9C27B0"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="10"
+        android:text="@string/enter_10_good_outcomes"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#DE18E4"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.628"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/text_slideshow"
-        app:layout_constraintVertical_bias="0.063" />
+        app:layout_constraintVertical_bias="0.074" />
 
     <ScrollView
         android:id="@+id/customScrollView"
         android:layout_width="324dp"
         android:layout_height="222dp"
+        android:scrollbarThumbVertical="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.276"
@@ -60,29 +73,43 @@
         <TextView
             android:id="@+id/customList"
             android:layout_width="296dp"
-            android:layout_height="139dp" />
+            android:layout_height="139dp"
+            android:textColor="@color/cardview_light_background" />
 
     </ScrollView>
+
 
     <Button
         android:id="@+id/customEnter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#000000"
+        android:fontFamily="@font/berkshire_swash"
         android:onClick="customSet"
+        android:shadowColor="#DE18E4"
+        android:shadowRadius="50"
         android:text="@string/add"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FAF8FA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintHorizontal_bias="0.984"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.178" />
+        app:layout_constraintVertical_bias="0.196" />
 
     <Button
         android:id="@+id/btnBack"
         android:layout_width="67dp"
         android:layout_height="45dp"
+        android:background="#000000"
+        android:fontFamily="@font/berkshire_swash"
         android:onClick="clickToGoBack"
-        android:text="@string/back"
+        android:shadowColor="#DE18E4"
+        android:shadowRadius="50"
+        android:text="@string/backd"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -94,8 +121,14 @@
         android:id="@+id/btnNext"
         android:layout_width="73dp"
         android:layout_height="43dp"
+        android:background="#000000"
+        android:fontFamily="@font/berkshire_swash"
         android:onClick="clickToGoNext"
+        android:shadowColor="#DE18E4"
+        android:shadowRadius="50"
         android:text="@string/next"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.985"
@@ -107,14 +140,14 @@
         android:id="@+id/ivChoices"
         android:layout_width="224dp"
         android:layout_height="180dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btnNext"
         app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.823"
-        app:srcCompat="@drawable/packettracer"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/packettracer" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

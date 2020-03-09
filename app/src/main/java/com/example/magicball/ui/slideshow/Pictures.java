@@ -7,6 +7,4 @@ import java.util.ArrayList;
 public class Pictures extends ArrayList<Integer> {
 
 
-
-
 }
