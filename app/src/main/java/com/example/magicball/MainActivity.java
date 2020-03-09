@@ -53,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
     Button cusButton;
     int count=1;
     public static String output="";
+    final int good=11;
+    final int neutral=17;
+    final int bad=23;
+    final int plist=5;
 
     //Scroll List
     TextView list;
@@ -131,29 +135,37 @@ public class MainActivity extends AppCompatActivity {
         String str;
         str=input.getText().toString();
 
-
         //Ongoing String
 
-        if(count<11)
+        //Goes to Netural without saying
+        if(count<good)
         {
             custom.fillGood(str);
-            reply.setText(10-count +", Good");
+            reply.setText((good-1) - count + ", Good");
             input.setText("");
             output= output+"Good: "+str+"\n";
             count++;
+            if(count==good) { //add a final
+                reply.setText(plist+ ", Neutral");
+                count++;
+            }
         }
-        else if(count<15)
+        else if(count<neutral)
         {
             custom.fillNeutral(str);
-            reply.setText(15-count+", Neutral");
+            reply.setText((neutral-1)-count+", Neutral");
             input.setText("");
             output= output+"Neutral: "+str+"\n";
             count++;
+            if(count==neutral) { //add a final
+                reply.setText(plist+ ", Bad");
+                count++;
+            }
         }
-        else if(count<20)
+        else if(count<bad)
         {
             custom.fillBad(str);
-            reply.setText(20-count+", Bad");
+            reply.setText((bad-1)-count+", Bad");
             input.setText("");
             output+="Bad: "+str+"\n";
             count++;
