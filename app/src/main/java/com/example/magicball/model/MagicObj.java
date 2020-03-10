@@ -37,7 +37,6 @@ public class MagicObj
             case 9:
             case 10:{
                 return good.get(roll-1);
-
             }
             case 11:
             case 12:

@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
     ImageView ivChoices;
     Pictures pictures = new Pictures();
 
+
+
     Dice dice = new Dice();
     MagicObj magicEightBall = new Base();
     Custom custom = new Custom();
@@ -133,7 +135,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Ongoing String
-
         if(count<11)
         {
             custom.fillGood(str);
@@ -176,6 +177,7 @@ public class MainActivity extends AppCompatActivity {
         }
         ivChoices.setImageResource(pictures.get(index));
         Global.image = pictures.get(index);
+
     }
 
     public void clickToGoNext(View view) {
@@ -186,12 +188,22 @@ public class MainActivity extends AppCompatActivity {
 
         ivChoices.setImageResource(pictures.get(index));
         Global.image = pictures.get(index);
+
     }
 
     public void getFortuneForCustom(View view) {
 
         cusAnswer= findViewById(R.id.customAnswer);
         cusAnswer.setText(custom.createRandom(dice.roll20()));
+
+
+    }
+
+    public void btnCustomDone(View view) {
+
+
+
+
 
     }
 }

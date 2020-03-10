@@ -6,6 +6,25 @@
     android:layout_height="match_parent"
     android:background="#000000">
 
+    <Button
+        android:id="@+id/btnDone"
+        android:layout_width="73dp"
+        android:layout_height="43dp"
+        android:background="#000000"
+        android:fontFamily="@font/berkshire_swash"
+        android:onClick="btnCustomDone"
+        android:shadowColor="#DE18E4"
+        android:shadowRadius="50"
+        android:text="@string/done"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.884"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963" />
+
     <TextView
         android:id="@+id/text_slideshow"
         android:layout_width="match_parent"
@@ -93,10 +112,10 @@
         android:textColor="#FAF8FA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.984"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.196" />
+        app:layout_constraintVertical_bias="0.206" />
 
     <Button
         android:id="@+id/btnBack"
