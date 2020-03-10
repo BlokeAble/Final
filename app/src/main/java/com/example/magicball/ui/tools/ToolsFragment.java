@@ -4,15 +4,19 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.magicball.R;
+import com.example.magicball.controller.Global;
+import com.example.magicball.ui.slideshow.SlideshowFragment;
 
 public class ToolsFragment extends Fragment {
 
@@ -30,6 +34,12 @@ public class ToolsFragment extends Fragment {
                 textView.setText(s);
             }
         });
+        ImageView customImage;
+        customImage = root.findViewById(R.id.customImage);
+        customImage.setImageResource(Global.image);
+        System.out.println(Global.image);
         return root;
+
+
     }
 }

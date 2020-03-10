@@ -1,5 +1,7 @@
 package com.example.magicball.model;
 
+import android.media.Image;
+
 public class Custom extends MagicObj
 {
 
