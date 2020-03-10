@@ -1,4 +1,4 @@
-package com.example.magicball.ui.EightBall;
+package com.example.magicball.model.EightBall;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,7 +14,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.magicball.R;
 
-public class GalleryFragment extends Fragment {
+public class MagicEightFragment extends Fragment {
 
     private GalleryViewModel galleryViewModel;
 

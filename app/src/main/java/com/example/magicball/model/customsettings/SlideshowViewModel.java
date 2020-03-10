@@ -1,14 +1,18 @@
-package com.example.magicball.ui.tools;
+package com.example.magicball.model.customsettings;
+
+import android.media.Image;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class ToolsViewModel extends ViewModel {
+public class SlideshowViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
+    private MutableLiveData<Image> hold;
 
-    public ToolsViewModel() {
+
+    public SlideshowViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("");
     }
@@ -16,4 +20,5 @@ public class ToolsViewModel extends ViewModel {
     public LiveData<String> getText() {
         return mText;
     }
+
 }

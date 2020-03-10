@@ -1,4 +1,4 @@
-package com.example.magicball.ui.tools;
+package com.example.magicball.model.custom;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,12 +11,10 @@ import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.magicball.R;
 import com.example.magicball.controller.Global;
-import com.example.magicball.ui.slideshow.SlideshowFragment;
 
 public class ToolsFragment extends Fragment {
 

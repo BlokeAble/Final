@@ -1,7 +1,6 @@
 package com.example.magicball;
 
 import android.annotation.SuppressLint;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import com.example.magicball.controller.Global;
@@ -9,9 +8,7 @@ import com.example.magicball.model.Base;
 import com.example.magicball.model.Custom;
 import com.example.magicball.model.Dice;
 import com.example.magicball.model.MagicObj;
-import com.example.magicball.ui.slideshow.Pictures;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import com.example.magicball.model.customsettings.Pictures;
 
 import android.view.View;
 
@@ -28,13 +25,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ScrollView;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
