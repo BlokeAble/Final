@@ -67,9 +67,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Global.goodReplies.clear();
-        Global.neutralReplies.clear();
-        Global.badReplies.clear();
         pictures.add(R.drawable.cat);
         pictures.add(R.drawable.packettracer);
         pictures.add(R.drawable.panda);
