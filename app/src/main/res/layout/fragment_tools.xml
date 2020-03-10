@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="#000000">
 
     <TextView
         android:id="@+id/text_tools"
@@ -21,28 +21,35 @@
 
     <EditText
         android:id="@+id/customQuestion"
-        android:layout_width="327dp"
-        android:layout_height="54dp"
+        android:layout_width="339dp"
+        android:layout_height="57dp"
+        android:autofillHints=""
+        android:backgroundTint="#FF00FF"
         android:ems="10"
+        android:fontFamily="@font/berkshire_swash"
         android:hint="@string/enter_a_quesion"
         android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColorHint="#FFFFFF"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.177"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.076" />
 
     <TextView
         android:id="@+id/customAnswer"
-        android:layout_width="189dp"
-        android:layout_height="80dp"
+        android:layout_width="230dp"
+        android:layout_height="79dp"
+        android:fontFamily="@font/berkshire_swash"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.441"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.425" />
+        app:layout_constraintVertical_bias="0.287" />
 
     <ImageView
         android:id="@+id/customImage"
@@ -54,19 +61,25 @@
         app:layout_constraintHorizontal_bias="0.741"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.915"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/cat" />
 
     <Button
         android:id="@+id/customSub"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="152dp"
+        android:layout_height="60dp"
+        android:background="#000000"
+        android:fontFamily="@font/berkshire_swash"
         android:onClick="getFortuneForCustom"
+        android:shadowColor="#FF00FF"
+        android:shadowRadius="30"
         android:text="@string/click_for_fortune"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintHorizontal_bias="0.43"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.285" />
+        app:layout_constraintVertical_bias="0.166" />
 </androidx.constraintlayout.widget.ConstraintLayout>
